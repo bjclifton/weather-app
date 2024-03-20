@@ -1,5 +1,6 @@
 // WeatherForm.js
 import '../styles/WeatherForm.css';
+import image from '../img/day.svg';
 import React, { useState } from 'react';
 
 function WeatherForm({ onSearch }) {
@@ -11,11 +12,13 @@ function WeatherForm({ onSearch }) {
   };
 
   return (
-    <div>
-      <h1>Swaggy Brad's Weather</h1>
-      <form onSubmit={handleSubmit}>
-        <input type="text" placeholder="Enter City" className="input input-bordered w-full max-w-xs" value={location} onChange={(e) => setLocation(e.target.value)} />
-        <button type="submit">Search</button>
+    <div className="weather-form">
+      <img src={image} alt="weather" />   
+      <form noValidate autoComplete="Off" className="search-bar" onSubmit={handleSubmit}>
+        <input type="text" name="search" pattern=".*\S.*" required value={location} onChange={(e) => setLocation(e.target.value)}/>
+        <button className="search-btn" type="submit">
+          <span>Search</span>
+        </button>
       </form>
     </div>
   );

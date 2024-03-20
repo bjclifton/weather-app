@@ -1,0 +1,32 @@
+.weather-display {
+    font-family: 'Source Code Pro', sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.forecast {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.image-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.weather-display button {
+    margin: 10px;
+}
+
+@media screen and (prefers-color-scheme: dark) {
+    .weather-display button {
+        background: #171717;
+        color: #f1f1f1;
+    }
+
+}
