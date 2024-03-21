@@ -6,8 +6,8 @@ body {
   font-family: 'Source Code Pro', sans-serif;
 }
   
-#id {
-  height: 100%;
+#root {
+  height: 95vh;
 }
 
 header {
