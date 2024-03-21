@@ -5,9 +5,9 @@ body {
   justify-content: center;
   font-family: 'Source Code Pro', sans-serif;
 }
-  
+
 #root {
-  height: 95vh;
+  height: 500px;
 }
 
 header {
