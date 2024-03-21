@@ -26,9 +26,9 @@ function WeatherDisplay({ data, location}) {
           {day} {time}
         </h3>
         <div className="image-container">
-          <button onClick={() => setIndex(((index - 1)%14 + 14)%14)}>&lt;</button>
+          <button onClick={() => setIndex(((index - 1)%156 + 156)%156)}>&lt;</button>
           <img src={period.icon} className="weather-icon" alt={period.shortForecast} />
-          <button onClick={() => setIndex((index + 1)%14)}>&gt;</button>
+          <button onClick={() => setIndex((index + 1)%156)}>&gt;</button>
         </div>
         <p className="short-forecast">{period.shortForecast}</p>
         <p className="temp">Temperature: {period.temperature}°F</p>

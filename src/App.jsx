@@ -38,7 +38,7 @@ function App() {
     }
     const weatherData = await weatherResponse.json();
 
-    const forecastURL = weatherData.properties.forecast;
+    const forecastURL = weatherData.properties.forecastHourly;
 
     const forecastResponse = await fetch(forecastURL);
 
@@ -47,7 +47,7 @@ function App() {
       return;
     }
     const forecastData = await forecastResponse.json();
-    
+    console.log(forecastData);
     setError(false);
     setWeatherData(forecastData);
   };
