@@ -2,7 +2,7 @@
 import React from "react";
 import "../styles/WeatherDisplay.css";
 
-function WeatherDisplay({ data, location}) {
+function WeatherDisplay({ data, location }) {
   const [index, setIndex] = React.useState(0);
 
   // Take location, and completely lowercase it, make the first letter of everyword uppercase
@@ -26,9 +26,9 @@ function WeatherDisplay({ data, location}) {
           {day} {time}
         </h3>
         <div className="image-container">
-          <button onClick={() => setIndex(((index - 1)%156 + 156)%156)}>&lt;</button>
-          <img src={period.icon} className="weather-icon" alt={period.shortForecast} />
-          <button onClick={() => setIndex((index + 1)%156)}>&gt;</button>
+          <button onClick={() => setIndex(((index - 1) % 156 + 156) % 156)}>&lt;</button>
+          <img src={`https://api.weather.gov${period.icon}`} className="weather-icon" alt={period.shortForecast} />
+          <button onClick={() => setIndex((index + 1) % 156)}>&gt;</button>
         </div>
         <p className="short-forecast">{period.shortForecast}</p>
         <p className="temp">Temperature: {period.temperature}°F</p>
@@ -47,3 +47,4 @@ function WeatherDisplay({ data, location}) {
 }
 
 export default WeatherDisplay;
+
